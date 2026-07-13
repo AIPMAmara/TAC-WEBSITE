@@ -194,10 +194,10 @@ ul{ list-style:none; }
 .speakers-sub{ color:var(--muted-on-purple); font-size:1rem; max-width:54ch; margin:0 auto; }
 
 .speakers-grid{
-  display:grid; grid-template-columns:repeat(3,1fr); gap:2.2rem;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1.8rem;
   margin-top:4rem; text-align:left;
 }
-@media (max-width:880px){ .speakers-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:980px){ .speakers-grid{ grid-template-columns:repeat(2,1fr); gap:2.2rem; } }
 @media (max-width:560px){ .speakers-grid{ grid-template-columns:1fr; } }
 
 .speaker-card{ background:var(--lilac); border-radius:14px; overflow:hidden; box-shadow:0 16px 34px rgba(0,0,0,0.28); }
@@ -207,8 +207,10 @@ ul{ list-style:none; }
 }
 .speaker-photo::after{ content:""; position:absolute; bottom:0; left:0; right:0; height:4px; background:var(--grad-gold); }
 .speaker-photo svg{ width:46%; height:46%; }
-.speaker-info{ padding:1.4rem 1.4rem 1.7rem; text-align:center; }
+.speaker-photo img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; }
+.speaker-info{ padding:1.4rem 1.2rem 1.7rem; text-align:center; }
 .speaker-name{ font-family:'Montserrat', sans-serif; font-weight:800; font-size:1.05rem; color:var(--purple-top); }
+.speaker-title{ font-family:'Plus Jakarta Sans', sans-serif; font-weight:600; font-style:italic; font-size:0.9rem; color:var(--purple-top); margin-top:0.35rem; }
 .speaker-role{ font-family:'Plus Jakarta Sans', sans-serif; font-weight:500; font-size:0.85rem; color:var(--muted-on-lilac); margin-top:0.35rem; }
 
 /* TBA speaker placeholder state */
@@ -522,21 +524,91 @@ footer .convener{ margin-top:1.2rem; font-size:0.85rem; color:var(--muted-on-pur
     <p class="eyebrow eyebrow--gold">FEATURED GUESTS</p>
     <h2>The Amazon Conference 2026 Speakers</h2>
     <span class="gold-underline"></span>
-    <p class="speakers-sub">Lineup dropping soon — these slots will be filled with confirmed speakers as they're announced.</p>
+    <p class="speakers-sub">Meet the voices leading the conversation at TAC 2026 — with more announcements dropping soon.</p>
   </div>
 
   <div class="speakers-grid">
 
     <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="https://res.cloudinary.com/dt97gr8xy/image/upload/v1783958285/Obiajulu_speaker_ve9oea.jpg" alt="Obiajulu Igwesi">
+      </div>
+      <div class="speaker-info">
+        <p class="speaker-name">Obiajulu Igwesi</p>
+        <p class="speaker-title">Founder, Evolvance</p>
+        <p class="speaker-role">Speaker</p>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="https://res.cloudinary.com/dt97gr8xy/image/upload/v1783959307/PHOTO-2026-07-08-16-33-26.jpg_kf4mb8.jpg" alt="Nwankwo Praise (Global Praise)">
+      </div>
+      <div class="speaker-info">
+        <p class="speaker-name">Nwankwo Praise (Global Praise)</p>
+        <p class="speaker-title">Founder, HerRise Foundation</p>
+        <p class="speaker-role">Speaker</p>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="https://res.cloudinary.com/dt97gr8xy/image/upload/v1783958266/goshen_speaker_hr5eqh.jpg" alt="Mmoneke Goshen">
+      </div>
+      <div class="speaker-info">
+        <p class="speaker-name">Mmoneke Goshen</p>
+        <p class="speaker-title">Founder, CreatorVerse</p>
+        <p class="speaker-role">Speaker</p>
+      </div>
+    </div>
+
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="https://res.cloudinary.com/dt97gr8xy/image/upload/v1783961461/favour_speaker_sq6n1q.jpg" alt="Ogbah Favour (El Favy)">
+      </div>
+      <div class="speaker-info">
+        <p class="speaker-name">Ogbah Favour (El Favy)</p>
+        <p class="speaker-title">CEO, Mind2Life Solutions</p>
+        <p class="speaker-role">Speaker</p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<section class="speakers reveal" id="panelists">
+  <div class="speakers-inner">
+  <div class="speakers-head">
+    <p class="eyebrow eyebrow--gold">PANEL SESSION</p>
+    <h2>Panelists &amp; Event Host</h2>
+    <span class="gold-underline"></span>
+    <p class="speakers-sub">The minds steering the panel conversation and the host holding it all together.</p>
+  </div>
+
+  <div class="speakers-grid">
+
+    <div class="speaker-card">
+      <div class="speaker-photo">
+        <img src="https://res.cloudinary.com/dt97gr8xy/image/upload/ar_3:4,c_crop,g_north_west,h_473,w_355,x_239,y_321/Dinma_Panelist_bno7gi.jpg" alt="Okoroeze Chidinma">
+      </div>
+      <div class="speaker-info">
+        <p class="speaker-name">Okoroeze Chidinma</p>
+        <p class="speaker-title">Fmr SUG VP, EBSU</p>
+        <p class="speaker-role">Panelist</p>
+      </div>
+    </div>
+
+    <div class="speaker-card">
       <div class="speaker-photo tba">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="sg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
-          <path fill="url(#sg1)" d="M50 14 C38 14 30 24 30 36 C30 42 32 47 35 51 C22 58 14 72 14 90 L86 90 C86 72 78 58 65 51 C68 47 70 42 70 36 C70 24 62 14 50 14 Z"/>
+          <defs><linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
+          <path fill="url(#pg2)" d="M50 14 C38 14 30 24 30 36 C30 42 32 47 35 51 C22 58 14 72 14 90 L86 90 C86 72 78 58 65 51 C68 47 70 42 70 36 C70 24 62 14 50 14 Z"/>
         </svg>
       </div>
       <div class="speaker-info">
         <p class="speaker-name tba">To Be Announced</p>
-        <p class="speaker-role tba">Speaker · TAC 2026</p>
+        <p class="speaker-role tba">Panelist</p>
         <span class="tba-badge">Dropping Soon</span>
       </div>
     </div>
@@ -544,13 +616,13 @@ footer .convener{ margin-top:1.2rem; font-size:0.85rem; color:var(--muted-on-pur
     <div class="speaker-card">
       <div class="speaker-photo tba">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="sg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
-          <path fill="url(#sg2)" d="M50 14 C38 14 30 24 30 36 C30 42 32 47 35 51 C22 58 14 72 14 90 L86 90 C86 72 78 58 65 51 C68 47 70 42 70 36 C70 24 62 14 50 14 Z"/>
+          <defs><linearGradient id="pg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
+          <path fill="url(#pg3)" d="M50 14 C38 14 30 24 30 36 C30 42 32 47 35 51 C22 58 14 72 14 90 L86 90 C86 72 78 58 65 51 C68 47 70 42 70 36 C70 24 62 14 50 14 Z"/>
         </svg>
       </div>
       <div class="speaker-info">
         <p class="speaker-name tba">To Be Announced</p>
-        <p class="speaker-role tba">Speaker · TAC 2026</p>
+        <p class="speaker-role tba">Panelist</p>
         <span class="tba-badge">Dropping Soon</span>
       </div>
     </div>
@@ -558,56 +630,14 @@ footer .convener{ margin-top:1.2rem; font-size:0.85rem; color:var(--muted-on-pur
     <div class="speaker-card">
       <div class="speaker-photo tba">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="sg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
-          <circle cx="50" cy="32" r="16" fill="url(#sg3)"/>
-          <path fill="url(#sg3)" d="M18 90 C18 68 32 58 50 58 C68 58 82 68 82 90 Z"/>
+          <defs><linearGradient id="pg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
+          <circle cx="50" cy="32" r="16" fill="url(#pg4)"/>
+          <path fill="url(#pg4)" d="M18 90 C18 68 32 58 50 58 C68 58 82 68 82 90 Z"/>
         </svg>
       </div>
       <div class="speaker-info">
         <p class="speaker-name tba">To Be Announced</p>
-        <p class="speaker-role tba">Speaker · TAC 2026</p>
-        <span class="tba-badge">Dropping Soon</span>
-      </div>
-    </div>
-
-    <div class="speaker-card">
-      <div class="speaker-photo tba">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="sg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
-          <path fill="url(#sg4)" d="M50 14 C38 14 30 24 30 36 C30 42 32 47 35 51 C22 58 14 72 14 90 L86 90 C86 72 78 58 65 51 C68 47 70 42 70 36 C70 24 62 14 50 14 Z"/>
-        </svg>
-      </div>
-      <div class="speaker-info">
-        <p class="speaker-name tba">To Be Announced</p>
-        <p class="speaker-role tba">Speaker · TAC 2026</p>
-        <span class="tba-badge">Dropping Soon</span>
-      </div>
-    </div>
-
-    <div class="speaker-card">
-      <div class="speaker-photo tba">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="sg5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
-          <path fill="url(#sg5)" d="M50 14 C38 14 30 24 30 36 C30 42 32 47 35 51 C22 58 14 72 14 90 L86 90 C86 72 78 58 65 51 C68 47 70 42 70 36 C70 24 62 14 50 14 Z"/>
-        </svg>
-      </div>
-      <div class="speaker-info">
-        <p class="speaker-name tba">To Be Announced</p>
-        <p class="speaker-role tba">Speaker · TAC 2026</p>
-        <span class="tba-badge">Dropping Soon</span>
-      </div>
-    </div>
-
-    <div class="speaker-card">
-      <div class="speaker-photo tba">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs><linearGradient id="sg6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0855"/><stop offset="1" stop-color="#120532"/></linearGradient></defs>
-          <path fill="url(#sg6)" d="M50 14 C38 14 30 24 30 36 C30 42 32 47 35 51 C22 58 14 72 14 90 L86 90 C86 72 78 58 65 51 C68 47 70 42 70 36 C70 24 62 14 50 14 Z"/>
-        </svg>
-      </div>
-      <div class="speaker-info">
-        <p class="speaker-name tba">To Be Announced</p>
-        <p class="speaker-role tba">Speaker · TAC 2026</p>
+        <p class="speaker-role tba">Event Host</p>
         <span class="tba-badge">Dropping Soon</span>
       </div>
     </div>
@@ -751,4 +781,4 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 </script>
 
 </body>
-</html>
+</html> 
